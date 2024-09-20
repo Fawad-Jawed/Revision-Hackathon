@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="../JsFile/detail.js" defer></script>
+  </head>
+  <body class="bg-gray-100 flex flex-col m-8">
+    <div
+      class="w-full bg-blue-600 text-white fixed top-0 left-0 z-50 shadow-md flex justify-between items-center p-4"
+    >
+      <h1 class="text-4xl font-bold">Administration Portal</h1>
+      <div>
+        <button
+          id="signout-btn"
+          class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded font-medium"
+        >
+          Sign Out
+        </button>
+      </div>
+    </div>
+
+    <main class="flex-1 flex items-center justify-center p-4 mt-12">
+      <div class="w-full max-w-4xl">
+        <div class="bg-white p-6 rounded shadow-md mb-4">
+          <h2 class="text-xl font-semibold mb-2">Your Details</h2>
+          <div id="student-details" class="text-gray-800"></div>
+          <button
+            id="edit-btn"
+            class="hidden bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
+          >
+            Edit
+          </button>
+        </div>
+
+        <div class="bg-white p-6 rounded shadow-md">
+          <h2 class="text-xl font-semibold mb-2">Your Results</h2>
+          <div id="results" class="text-gray-800"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

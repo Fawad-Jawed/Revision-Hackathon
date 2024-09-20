@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex flex-col items-center min-h-screen m-0">
+    <div
+      class="w-full bg-blue-600 text-white fixed top-0 left-0 z-50 shadow-md flex justify-between items-center p-4"
+    >
+      <h1 class="text-4xl font-bold">Administration Portal</h1>
+      <div>
+        <a href="../Html Files/signIn.html">
+          <button
+            id="signout-btn"
+            class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded font-medium"
+          >
+            Log In
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="container bg-white p-6 rounded-lg shadow-md my-20 max-w-md w-full"
+    >
+      <h1 class="text-4xl font-bold text-center mb-6">Administration Portal</h1>
+      <form id="registration-form" class="flex flex-col">
+        <label for="user-type" class="font-medium mb-2">User Type:</label>
+        <select
+          id="user-type"
+          name="user-type"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        >
+          <option value="" disabled selected>Select user type</option>
+          <option value="student">Student</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <label for="first-name" class="font-medium mb-2">First Name:</label>
+        <input
+          type="text"
+          id="first-name"
+          name="first-name"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        />
+
+        <label for="last-name" class="font-medium mb-2">Last Name:</label>
+        <input
+          type="text"
+          id="last-name"
+          name="last-name"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        />
+
+        <label for="email" class="font-medium mb-2">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        />
+
+        <label for="password" class="font-medium mb-2">Password:</label>
+        <input
+          type="password"
+          id="pass"
+          name="password"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        />
+
+        <label for="mobile" class="font-medium mb-2">Mobile Number:</label>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          pattern="[0-9]{10}"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        />
+
+        <label for="cnic" class="font-medium mb-2">CNIC:</label>
+        <input
+          type="number"
+          id="cnic"
+          name="cnic"
+          pattern="[0-9]{10}"
+          required
+          class="p-2 mb-4 border border-gray-300 rounded"
+        />
+
+        <label class="font-medium mb-2">Gender:</label>
+        <div class="flex flex-col mb-4">
+          <label for="male" class="mb-2 flex items-center">
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              required
+              class="mr-2"
+            />
+            Male
+          </label>
+          <label for="female" class="mb-2 flex items-center">
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+              class="mr-2"
+            />
+            Female
+          </label>
+          <label for="other" class="flex items-center">
+            <input
+              type="radio"
+              id="other"
+              name="gender"
+              value="other"
+              required
+              class="mr-2"
+            />
+            Other
+          </label>
+        </div>
+
+        <button
+          type="button"
+          id="btn"
+          class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded font-medium"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+
+    <script type="module" src="JsFile/script.js"></script>
+  </body>
+</html>
